@@ -50,7 +50,7 @@ const ControllerProving = () => {
     }
     const handleGetAllStudents = async () => {
         let response = await getAllStudents()
-        if (response.status === 201) {
+        if (response.status === 200) {
             console.log(response.body)
         } else {
             console.log(response.body)
@@ -74,9 +74,9 @@ const ControllerProving = () => {
     }
     const handleCreateStudent = async () => {
         let newStudent = {
-            name_complete: "Kelvin el UI DESIGNER",
-            date_birth: "31/04/2002",
-            direction: "Aldea Ocubila",
+            name_complete: "ElUnicoFer Rafterminador",
+            date_birth: "26/10/2008",
+            direction: "Aldea Xela",
             gradeRef: "4ipYcYTWIx9IlnS11tmh",
             manager_name: "Jorge Esteban Lopez Herrera de las Casas",
             manager_phone: "+502 52858964",

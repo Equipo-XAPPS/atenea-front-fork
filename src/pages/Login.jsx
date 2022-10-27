@@ -145,7 +145,7 @@ const Login = () => {
         <Button text="Ingresar" typeButton={"button-type-2"} className="" type="submit" form="login-form" />
         <button className="sml-button p-0">
           <span className="sml-text-2">¿No tiene una cuenta?</span>{" "}
-          <Link to="/register">
+          <Link to="/backend">
             <span className="text-[#7064FF]">Registrarse ahora</span>
           </Link>
         </button>
