@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../utils/Redirect";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
@@ -17,7 +18,7 @@ import Button from "../components/Button";
 
 const LandingPage = () => {
   const navigate = useNavigate();
-  localStorage.clear()
+  localStorage.clear();
   function handleLogin() {
     navigate("login");
   }
@@ -28,10 +29,23 @@ const LandingPage = () => {
     <>
       {" "}
       <Navbar />
-      <div className="mx-5 min-h-screen flex flex-col justify-between md:mx-16 md:grid md:grid-cols-2 md:mt-10" id="hometop">
+      <div
+        className="mx-5 min-h-screen flex flex-col justify-between md:mx-16 md:grid md:grid-cols-2 md:mt-10"
+        id="hometop"
+      >
         <div className="md:mb-20">
-          <Image image={WelcomeImg} alt="dashboard" className="md:hidden mx-auto mb-4" type={1} />
-          <Image image={GotophoneImage} alt="dashboard" className="hidden mx-auto md:flex" type={2} />
+          <Image
+            image={WelcomeImg}
+            alt="dashboard"
+            className="md:hidden mx-auto mb-4"
+            type={1}
+          />
+          <Image
+            image={GotophoneImage}
+            alt="dashboard"
+            className="hidden mx-auto md:flex"
+            type={2}
+          />
         </div>
         {/* contenido en mobile */}
         <div className="text-center flex flex-col items-center gap-5 md:hidden ">
@@ -42,8 +56,23 @@ const LandingPage = () => {
         </div>
 
         <div className="md:hidden">
-          <Button text="Ingresar" typeButton={"button-type-1"} className="my-5 min-w-full" type="button" onClick={handleLogin} />
-          <Button text="Registrarse" typeButton={"button-type-2"} className="my-5 min-w-full" type="button" onClick={handleRegister} />
+          <Link to="/backend" className="sml-button self-end text-[#776694]">
+            Backend
+          </Link>
+          <Button
+            text="Ingresar"
+            typeButton={"button-type-1"}
+            className="my-5 min-w-full"
+            type="button"
+            onClick={handleLogin}
+          />
+          <Button
+            text="Registrarse"
+            typeButton={"button-type-2"}
+            className="my-5 min-w-full"
+            type="button"
+            onClick={handleRegister}
+          />
           <a
             href="#aboutInit"
             className="btntxtsmmobl text-[#4D3483] flex flex-col items-center mb-5"
@@ -106,7 +135,12 @@ const LandingPage = () => {
           </div>
         </div>
         <div className="mb-6 md:mb-0">
-          <Image image={WhatIsImg} alt="WhatIsImg" className="mx-auto -scale-x-100 md:flex md:scale-x-100" type={2} />
+          <Image
+            image={WhatIsImg}
+            alt="WhatIsImg"
+            className="mx-auto -scale-x-100 md:flex md:scale-x-100"
+            type={2}
+          />
         </div>
         <p className="text-center md:hidden">
           Atenea es un proyecto social pensado y desarrollado para apoyar y
@@ -144,7 +178,12 @@ const LandingPage = () => {
           </div>
         </div>
         <div className="mb-6 md:mb-0 md:h-[880px] md:order-1">
-          <Image image={ForWhomImg} alt="ForWhomImg" className="mx-auto md:flex" type={2} />
+          <Image
+            image={ForWhomImg}
+            alt="ForWhomImg"
+            className="mx-auto md:flex"
+            type={2}
+          />
         </div>
         <p className="text-center md:hidden">
           Atenea nació gracias a la colaboración entre Equipo Xapps y las
@@ -182,7 +221,12 @@ const LandingPage = () => {
           </div>
         </div>
         <div className="mb-6 md:mb-0 md:h-[880px]">
-          <Image image={ByWhomImg} alt="ByWhomImg" className="mx-auto md:flex" type={2} />
+          <Image
+            image={ByWhomImg}
+            alt="ByWhomImg"
+            className="mx-auto md:flex"
+            type={2}
+          />
         </div>
         <p className="text-center md:hidden">
           Atenea fue desarrollado por Equipo Xapps, un equipo conformado por

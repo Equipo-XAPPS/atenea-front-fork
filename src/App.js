@@ -47,6 +47,7 @@ function App() {
         <Route path="/restore/password" element={<OlvidePassword />} />
         <Route path="/restore/check/email" element={<Check />} />
         <Route path="/reset/password/*" element={<ResetPassword />} />
+        <Route path="/backend" element={<ControllerProving />} />
 
         <Route element={<PrivateRouteDirector />}>
           {/* rutas para la S02 - Administrativo */}
@@ -74,7 +75,6 @@ function App() {
           <Route path="/docentes-activos" element={<DocentesActivos />} />
           <Route path="/docentes-inactivos" element={<DocentesInactivos />} />
 
-          <Route path="/backend" element={<ControllerProving />} />
           <Route path="/grades/teacher/:id" element={<GradesAssigned />} />
           <Route path="/grades/teacher/:id/courses" element={<Courses />} />
           <Route
