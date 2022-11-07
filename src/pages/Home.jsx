@@ -2,10 +2,11 @@ import React from 'react'
 import HomeImg from "../assets/images/home.svg";
 import ArrowDown from "../assets/images/arrow-down.svg";
 import Image from "../components/Image";
-import BottomNavbar from "../components/BottomNavbar";
 
 export default function Home() {
-
+  document.body.classList.remove("stop-scrolling");
+  const userJSON = localStorage.getItem('usuario')
+  const usuario = JSON.parse(userJSON)
   return (
     <div className="relative">
       <div className="home mx-5 text-center flex flex-col gap-32">
@@ -17,7 +18,7 @@ export default function Home() {
         />
         <div className=" flex flex-col gap-32 mb-4">
           <div className="flex flex-col gap-4">
-            <h1>Bienvenido Director</h1>
+            <h1>{usuario?.role === "director" || usuario?.role === "admin" ? "Bienvenido Director" : "Bienvenido Docente"}</h1>
             <p>
               Selecciona una de las opciones de abajo para empezar a utilizar
               Atenea
@@ -28,7 +29,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <BottomNavbar />
     </div>
   );
 }
