@@ -16,13 +16,5 @@
 
   <body>
     <div id="root"></div>
-    <script>
-      const isProduction = "%NODE_ENV%" === "production";
-      if (isProduction && "serviceWorker" in navigator) {
-        navigator.serviceWorker.register("sw.js");
-      } else {
-        console.log("service worker can't install");
-      }
-    </script>
   </body>
 </html>

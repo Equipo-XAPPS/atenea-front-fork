@@ -61,14 +61,12 @@ function App() {
             <Route path="/docentes" element={<Teachers />} />
           </Route>
 
-
           <Route path="/grades/create" element={<NewGrade />} />
           <Route path="/grades/update/:id" element={<UpdateGrade />} />
           <Route path="/grades/update/:id/edit" element={<EditGrade />} />
 
           <Route path="/cuenta" element={<Account />} />
           <Route path="/tutoriales" element={<VideoTutorials />} />
-
 
           <Route path="/cuenta/alumno" element={<AlumnoAccount />} />
           <Route path="/editar/alumno" element={<EditAlumnoAccount />} />
@@ -78,15 +76,11 @@ function App() {
 
           {/* Docentes */}
 
-
           <Route path="/cuenta/docente/:id" element={<AccountPage />} />
           <Route path="/nuevos-docentes" element={<NuevosDocentes />} />
           <Route path="/docentes-activos" element={<DocentesActivos />} />
           <Route path="/docentes-inactivos" element={<DocentesInactivos />} />
 
-
-
-          <Route path="/backend" element={<ControllerProving />} />
           <Route path="/grades/teacher/:id" element={<GradesAssigned />} />
           <Route path="/grades/teacher/:id/courses" element={<Courses />} />
           <Route
@@ -97,11 +91,9 @@ function App() {
             path="/grades/teacher/:id/courses/:courseId"
             element={<Course />}
           />
-        </ Route >
+        </Route>
 
         <Route element={<PrivateRouteDocente />}>
-
-
           {/* rutas para la S03 - Área para docente */}
           <Route element={<BottomNavbarDirector />}>
             <Route path="/home/docente" element={<Home />} />
@@ -132,12 +124,13 @@ function App() {
             path="/grades/teacher/:id/courses/:courseId/activity/edit"
             element={<EditActividy />}
           />
-          <Route path="/backend" element={<ControllerProving />} />
           {/* Aquí termina la ruta para la S03 - Área para docente */}
 
-          {/* Pagina asistencia */}
           <Route path="/asistencia" element={<Asistencia />} />
-          <Route path="/asistencia/tomar-asistencia/:id" element={<TomarAsistencia />} />
+          <Route
+            path="/asistencia/tomar-asistencia/:id"
+            element={<TomarAsistencia />}
+          />
         </Route>
       </Routes>
     </BrowserRouter>
